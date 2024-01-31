@@ -71,4 +71,29 @@
 
 <hr>
 
+<h2>Typescript</h2>
+<p>TypeScript to get a value of an interface property.</p>
+
+<pre>
+    interface MyInterface {
+    id: number;
+    name: string;
+    properties: string[];
+  }
+  
+  const myObject: MyInterface = {
+    id: 1,
+    name: 'foo',
+    properties: ['a', 'b', 'c']
+  };
+  
+  function getValue(value: keyof MyInterface) {
+    return myObject[value];
+  }
+  
+  getValue('id'); // 1
+  getValue('count')
+</pre>
+<p>Source: <a href="https://code.pieces.app/collections/typescript" target="_blank">Snippet Source</a></p>
+
 </html>
